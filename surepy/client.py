@@ -278,7 +278,7 @@ class SureAPIClient:
                     )
 
                 if response_data:
-                    responselen = len(response_data.get("data", ""))
+                    responselen = len(str(response_data.get("data", 0)))
                 else:
                     responselen = 0
                 logger.debug(
